@@ -26,7 +26,7 @@
     display: inline-block;
     margin: 0vw;
     position: relative;
-    left: 7vw;
+    left: 3vw;
     font-size: 2vw;
 }
    div .footercontent img {
@@ -34,17 +34,28 @@
     border-style: none;
     height: 3vw;
     padding-left: 2vw;
-    padding-right: 1vw;
+    padding-right: 2vw;
+    transition: all 1s ease-in-out 1s;
 }
 div .footercontent a{
   text-decoration: none;
+  
 
 }
-div .footercontent a:hover{
+
+
+div .footercontent img:hover{
   color: purple;
+  transform: rotate(45deg);
+  transform: scale(2);
 
 }
-
+  #time {
+    color: white;
+    position: relative;
+    right: -63vw;
+    bottom: -4vw;
+}
     </style>
   </head>
 <body>
@@ -137,11 +148,11 @@ div .footercontent a:hover{
 
 
 <!--skills-->
- <div id="skills" style="height: 10vw;"> <h1>Skills:</h1></div>
+ <div id="skills" style="height: 10vw;"> <h1 style="margin-left: 4vw;">Skills:</h1></div>
  <div class="container">
     <div class=" row mx-2vw d-flex justify-content-center align-item-center">
       <div class="col-lg-4">
-        <img src="c.png" alt="loading"  class="bd-placeholder-img rounded-circle" width="180" height="190">
+        <img src="c.png" alt="loading"  class="bd-placeholder-img rounded-circle" width="180" height="190" >
       
         <h2>C language</h2>
        
@@ -208,21 +219,21 @@ div .footercontent a:hover{
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="cricket.jpg" class="d-block w-100" alt="...">
+      <img src="cricket.jpg" class="d-block w-100" alt="..." style="opacity: 0.9;">
       <div class="carousel-caption d-none d-md-block">
         <h3>Love to play cricket</h3>
   
       </div>
     </div>
     <div class="carousel-item">
-      <img src="badminton.jpg" class="d-block w-100" alt="...">
+      <img src="badminton.jpg" class="d-block w-100" alt="..." style="opacity: 0.9;">
       <div class="carousel-caption d-none d-md-block">
         <h3>Like To Play badminton  &#128535;</h3>
         
       </div>
     </div>
     <div class="carousel-item">
-      <img src="music.jpg" class="d-block w-100" alt="...">
+      <img src="music.jpg" class="d-block w-100" alt="..." style="opacity: 0.9;">
       <div class="carousel-caption d-none d-md-block">
         <h3>Love to listen to music</h3>
        
@@ -311,7 +322,22 @@ div .footercontent a:hover{
 <div class="footercontent"> follow on linked in :<a href="http://www.linkedin.com/in/chirag-agrawal-32b5a31a3"> <img src="linkedin.png" class="imge" height="4"></a></div>
 <div class="footercontent">follow on instagram :<a href="https://www.instagram.com/invites/contact/?i=1m2qaw2eudl1s&utm_content=284j26e"> <img src="insta.png" class="imge" height="4"></a></div>
 <div class="footercontent">follow my git account :<a href="https://github.com/chirag6398"> <img src="git.png" class="imge" height="4"></a></div>
+<div >
+  <p id="time">
+    
+
+
+  </p>
+  
 </div>
+</div>
+<script>
+  function displaytime(){
+    let time=new Date();
+    document.getElementById('time').innerHTML=time;
+  }
+  setInterval(displaytime,1000);
+</script>
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
