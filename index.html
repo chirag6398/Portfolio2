@@ -53,7 +53,7 @@ div .footercontent img:hover{
   #time {
     color: white;
     position: relative;
-    right: -42vw;
+    right: -82vw;
     bottom: -6vw;
     font-size: 2vw;
 }
@@ -337,7 +337,7 @@ div .footercontent img:hover{
 </div>
 <script>
   function displaytime(){
-    let time=new Date();
+    let time=new Date().toLocaleTimeString();
     document.getElementById('time').innerHTML=time;
   }
   setInterval(displaytime,1000);
